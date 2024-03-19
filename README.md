@@ -1,2 +1,2 @@
 # cor1010
-File from the kuclass
+File from the ku class
