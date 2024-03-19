@@ -1,0 +1,5 @@
+print("hello this is tam")
+print("안녕하세요")
+print("tam xinh vl")
+print("dau thoi oi la thoi")
+print("do you want chimcon popcorn?")
