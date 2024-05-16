@@ -19,8 +19,8 @@ def makeRandomCircle():
     spx = np.random.uniform(low=1, high=10)
     spy = np.random.uniform(low=1, high=10)
     color = np.random.randint(low=0, high=256, size=3)
-    color[1] = 200
-    color[2] = 100
+    color[0] = 250
+    color[2] = 230
     return x, y, radius, spx, spy, color
 
 
@@ -41,7 +41,19 @@ def draw_circles(screen, circles ):
 def update_circles(circles):
     for c in circles:
         xy = c[0]
-        sp = c[2]
+        spxy = c[2]
+
+        # xy = xy + spxy
+        xy[0] = xy[0] + spxy[0]
+        xy[1] = xy[1] + spxy[1]
+
+        # print("after: ", xy, c[0])
+        # print("---")
+        if xy[0] < 0 or xy[0] >= screen_WIDTH:
+            spxy[0] = -spxy[0]
+        
+        if xy[1] < 0 or xy[1] >= screen_HEIGHT:
+            spxy[1] = -spxy[1]
         
     return
 
